@@ -12,11 +12,9 @@ angular.module('fullstackApp')
                     $http
                         .jsonp(url)
                         .success(function (data) {
-                            debugger;
                             deferred.resolve(data);
                         })
                         .error(function (err) {
-                            debugger;
                             deferred.reject(err);
                         });
                     return deferred.promise;

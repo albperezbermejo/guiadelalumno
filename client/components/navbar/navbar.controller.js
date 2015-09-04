@@ -13,7 +13,6 @@ angular
         var promise = Navbar.get();
 
         promise.then(function (response) {
-            debugger;
             $scope.menu = response;
         });
 

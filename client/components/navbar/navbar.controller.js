@@ -12,9 +12,14 @@ angular
             
         var promise = Navbar.get();
 
-        promise.then(function (response) {
-            $scope.menu = response;
-        });
+        promise.then(
+            function (response) {
+                $scope.menu = response;
+            },
+            function (error) {
+                console.log("error", error);
+            }
+        );
 
         // $scope.menu = [
         //     {
